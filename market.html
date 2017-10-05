@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SuperMarket</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width", initial-scale=1>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<script type="text/javascript" src="Bootstrap/js/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="Bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript">
+	function all(){
+		alert()
+		document.getElementById("ftotal").value = parseInt(document.getElementById("total").value) + parseInt(document.getElementById("total2").value) + parseInt(document.getElementById("total3").value)	
+	}
+	function gt()
+	{
+		document.getElementById()
+	}
+	
+	function show()
+	{
+		var a=document.getElementById('Total').value;
+		document.getElementById('Total').value=document.getElementById('ftotal').value=a
+	}
+	function cal()
+	{
+	var a= document.getElementById("Quantity").value
+	var b= document.getElementById("Price").value
+	var c= document.getElementById("Order").value
+	var d= document.getElementById("Total").value
+	d=b*c
+	document.getElementById("Total").value=''+d
+	document.getElementById("Quantity").value=document.getElementById("Quantity").value-c;
+	//document.getElementById("ftotal").value = parseInt(d);
+}
+function cal2()
+{
+	var a= document.getElementById("Quantity2").value
+	var b= document.getElementById("Price2").value
+	var c= document.getElementById("Order2").value
+	var d= document.getElementById("Total2").value
+	d=b*c
+	document.getElementById("Total2").value= '#'+d
+	document.getElementById("Quantity2").value=document.getElementById("Quantity2").value-c;
+	//document.getElementById("ftotal").value = parseInt(document.getElementById("ftotal").value) + parseInt(d)
+}
+function cal3()
+{
+	var a= document.getElementById("Quantity3").value
+	var b= document.getElementById("Price3").value
+	var c= document.getElementById("Order3").value
+	var d= document.getElementById("Total3").value
+	d=b*c
+	document.getElementById("Total3").value= '#'+d
+	document.getElementById("Quantity3").value=document.getElementById("Quantity3").value-c;
+}
+function cal4()
+{
+	var a= document.getElementById("Quantity4").value
+	var b= document.getElementById("Price4").value
+	var c= document.getElementById("Order4").value
+	var d= document.getElementById("Total4").value
+	d=b*c
+	document.getElementById("Total4").value= '#'+d
+	document.getElementById("Quantity4").value=document.getElementById("Quantity4").value-c;
+}
+function cal5()
+{
+	var a= document.getElementById("Quantity5").value
+	var b= document.getElementById("Price5").value
+	var c= document.getElementById("Order5").value
+	var d= document.getElementById("Total5").value
+	d=b*c
+	document.getElementById("Total5").value= '#'+d
+	document.getElementById("Quantity5").value=document.getElementById("Quantity5").value-c;
+}
+function cal6()
+{
+	var a= document.getElementById("Quantity6").value
+	var b= document.getElementById("Price6").value
+	var c= document.getElementById("Order6").value
+	var d= document.getElementById("Total6").value
+	d=b*c
+	document.getElementById("Total6").value= '#'+d
+	document.getElementById("Quantity6").value=document.getElementById("Quantity6").value-c;
+}
+function cal7()
+{
+	var a= document.getElementById("Quantity7").value
+	var b= document.getElementById("Price7").value
+	var c= document.getElementById("Order7").value
+	var d= document.getElementById("Total7").value
+	d=b*c
+	document.getElementById("Total7").value= '#'+d
+	document.getElementById("Quantity7").value=document.getElementById("Quantity7").value-c;
+}
+function cal8()
+{
+	var a= document.getElementById("Quantity8").value
+	var b= document.getElementById("Price8").value
+	var c= document.getElementById("Order8").value
+	var d= document.getElementById("Total8").value
+	d=b*c
+	document.getElementById("Total8").value= '#'+d
+	document.getElementById("Quantity8").value=document.getElementById("Quantity8").value-c;
+}
+function cal9()
+{
+	var a= document.getElementById("Quantity9").value
+	var b= document.getElementById("Price9").value
+	var c= document.getElementById("Order9").value
+	var d= document.getElementById("Total9").value
+	d=b*c
+	document.getElementById("Total9").value= '#'+d
+	document.getElementById("Quantity9").value=document.getElementById("Quantity9").value-c;
+}
+function cal10()
+{
+	var a= document.getElementById("Quantity10").value
+	var b= document.getElementById("Price10").value
+	var c= document.getElementById("Order10").value
+	var d= document.getElementById("Total10").value
+	d=b*c
+	document.getElementById("Total10").value= '#'+d
+	document.getElementById("Quantity10").value=document.getElementById("Quantity10").value-c;
+}
+
+	var firstvalue =0;
+	var secondvalue=0;
+	var oPressed ='';
+	
+	function power()
+	{
+		
+		var btn = document.getElementById('power').value;
+		if(btn == "ON")
+		{
+			document.getElementById('power').value = "OFF";
+			
+		}
+		else if(btn == "OFF")
+		{
+			document.getElementById('power').value = "ON";
+			document.getElementById("screen").innerHTML='';	
+		}
+	}
+
+	function button(U)
+	{
+		var btn = document.getElementById('power').value;
+		if(btn=="OFF")
+			{
+				document.getElementById("screen").innerHTML +=U;
+			}
+		else if(btn == "ON")
+		{
+
+		}
+		
+	}
+		// off and on ends here
+	// operators starts here
+	function bot()
+	{
+		document.getElementById("screen").innerHTML +='.';
+	}
+	function oper(v)
+	{
+		firstvalue= parseInt(document.getElementById("screen").innerHTML);
+		oPressed = v;
+		document.getElementById("screen").innerHTML ='';
+	}
+	function equal()
+	{
+		secondvalue= parseInt(document.getElementById("screen").innerHTML);
+		if(oPressed  =='plus')
+		{
+			document.getElementById("screen").innerHTML = firstvalue + secondvalue;
+		}else if(oPressed =='minus')
+		{
+			document.getElementById("screen").innerHTML = firstvalue - secondvalue;
+		}
+		else if(oPressed =='mlt')
+		{
+			document.getElementById("screen").innerHTML = firstvalue * secondvalue;
+		}
+		else if(oPressed =='div')
+		{
+			document.getElementById("screen").innerHTML = firstvalue / secondvalue;
+		}
+		else if(oPressed =='ex')
+		{
+			document.getElementById("screen").innerHTML = firstvalue * firstvalue;
+		}
+		else if(oPressed =='per')
+		{
+			document.getElementById("screen").innerHTML = (firstvalue /secondvalue) * 100;
+		}
+	}
+	function per()
+	{
+		document.getElementById("screen").innerHTML =document.getElementById("screen").innerHTML /100;
+	}
+	function clr()
+	{
+		document.getElementById("screen").innerHTML ='';
+	}
+	function off(u)
+	{
+	  document.getElementById('b').disabled = true;
+
+	}
+	function on()
+	{
+		document.getElementById('b').disabled = false;
+	}
+	function Display1()
+	{
+				document.getElementById('majdisplay').src=document.getElementById('mg1').src;
+	}
+    function Display2()
+    {
+    		document.getElementById('majdisplay').src=document.getElementById('mg2').src;
+     }
+     function Display3()
+     {
+     	document.getElementById('majdisplay').src=document.getElementById('mg3').src;
+     }
+     function Display4()
+     {
+     	document.getElementById('majdisplay').src=document.getElementById('mg4').src;
+     }
+     function Display5()
+     {
+     document.getElementById('majdisplay').src=document.getElementById('mg5').src;
+    }
+    function Display6()
+    {
+    	document.getElementById('majdisplay').src=document.getElementById('mg6').src;
+    }
+    function Display7()
+    {
+    	document.getElementById('majdisplay').src=document.getElementById('mg7').src;
+    }
+    function Display8()
+    {
+    	document.getElementById('majdisplay').src=document.getElementById('mg8').src;
+    }
+    function Display9()
+    {
+    	document.getElementById('majdisplay').src=document.getElementById('mg9').src;
+    }
+    function Display10()
+{
+	document.getElementById('majdisplay').src=document.getElementById('mg10').src;
+}
+</script>
+	
+</head>
+<body style="background-color: #f2f2f2">
+<form name="f1">
+<center><h4 style="background-color:black;color:orange">DELIGHT SUPREMACY SUPERMARKET</h4></center>
+<table border="1" style="width:100%;height:300px;">
+  <tr>
+  <th>S/N</th>
+    <th>Product image</th>
+    <th>Name</th>		
+    <th>Quantity Remaining</th>
+    <th>Price</th>
+    <th>Order</th>
+    <th>Total</th>
+    <th>Displayed Image</th>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td><img style="height:50px" id="mg1" onmouseover="Display1()" src="blender.jpg"></td>
+    <td>Blender</td>
+    <td><input type="text" name="" id="Quantity" value="50" disabled=""></td>		
+    <td><input type="text" name="" id="Price" value="8500" disabled=""></td>
+    <td><input type="text" name="" id="Order" onkeyup="cal()"  placeholder="place your order"></td>
+    <td><input type="text" name="" value="" id="Total" onkeyup="show()" placeholder="place your order"></td>
+    <td rowspan="10"><img src="" id="majdisplay" onmouseout="this.src=''" style="height:200px"></td>
+  </tr>
+  <tr>
+    <td>2</td>
+  <td><img id="mg2" style="height:50px" src="burner.jpg" onmouseover="Display2()"></td>
+    <td>Cooking Burner</td>
+    <td><input type="text" value="20" id="Quantity2" disabled="" name=""></td>		
+    <td><input type="text" value="10500" id="Price2" disabled="" name=""></td>
+    <td><input type="text" name="" id="Order2" onkeyup="cal2()" onkeyup="all()" placeholder="place your order"></td>
+    <td><input type="text" name="" id="Total2" placeholder="place your order"></td>
+    <!-- <td><img src="" id="majdisplay" onmouseout="this.scr=''"></td> -->
+  </tr>
+
+  <tr>
+    <td>3</td>
+  <td><img id="mg3" style="height:50px" onmouseover="Display3()" src="fan.jpg"></td>
+    <td>Standing Fan</td>
+    <td><input type="text" value="30" id="Quantity3" disabled="" name=""></td>		
+    <td><input type="text" value="22500" id="Price3" disabled="" name=""></td>
+    <td><input type="text" name="" id="Order3" onkeyup="cal3()" placeholder="place your order"></td>
+    <td><input type="text" name="" id="Total3" placeholder="place your order"></td>
+  </tr>
+
+  <tr>
+    <td>4</td>
+  <td><img id="mg4" style="height:50px" onmouseover="Display4()" src="microwave.jpg"></td>
+    <td>Microwave</td>
+    <td><input type="text" value="100" id="Quantity4" disabled="" name=""></td>		
+    <td><input type="text" value="28500" id="Price4" disabled="" name=""></td>
+    <td><input type="text" name="" id="Order4" onkeyup="cal4()" placeholder="place your order"></td>
+    <td><input type="text" name="" id="Total4" placeholder="place your order"></td>
+  </tr>
+
+  <tr>
+    <td>5</td>
+  <td><img id="mg5" style="height:50px" onmouseover="Display5()" src="trolley.jpg"></td>
+    <td>Trolley</td>
+    <td><input type="text" value="10" id="Quantity5" disabled="" name=""></td>		
+    <td><input type="text" value="4200" id="Price5" disabled="" name=""></td>
+    <td><input type="text" name="" id="Order5" onkeyup="cal5()" placeholder="place your order"></td>
+    <td><input type="text" name="" id="Total5" placeholder="place your order"></td>
+  </tr>
+
+  <tr>
+    <td>6</td>
+  <td><img id="mg6" style="height:50px" onmouseover="Display6()" src="wardrobe.jpg"></td>
+    <td>Walldrope</td>
+    <td><input type="text" value="15" id="Quantity6" disabled="" name=""></td>		
+    <td><input type="text" value="7000" id="Price6" disabled="" name=""></td>
+    <td><input type="text" name="" id="Order6" onkeyup="cal6()" placeholder="place your order"></td>
+    <td><input type="text" name="" id="Total6" placeholder="place your order"></td>
+  </tr>
+
+  <tr>
+    <td>7</td>
+<td><img id="mg7" style="height:50px" onmouseover="Display7()" src="water boiler.jpg"></td>
+    <td>Water Boiler</td>
+    <td><input type="text" value="20" id="Quantity7" disabled="" name=""></td>		
+    <td><input type="text" value="15000" id="Price7" disabled="" name=""></td>
+    <td><input type="text" id="Order7" onkeyup="cal7()" name="" placeholder="place your order"></td>
+    <td><input type="text" id="Total7" name="" placeholder="place your order"></td>
+  </tr>
+
+  <tr>
+    <td>8</td>
+  <td><img id="mg8" style="height:50px" onmouseover="Display8()" src="vaccum clearner.jpg"></td>
+    <td>Vaccum Clearner</td>
+    <td><input type="text" value="45" disabled="" id="Quantity8" name=""></td>		
+    <td><input type="text" value="38000" disabled="" id="Price8" name=""></td>
+    <td><input type="text" id="Order8" onkeyup="cal8()" name="" placeholder="place your order"></td>
+    <td><input type="text" name="" id="Total8" placeholder="place your order"></td>
+  </tr>
+
+  <tr>
+    <td>9</td>
+  <td><img id="mg9" style="height:50px" onmouseover="Display9()" src="spoons.jpg"></td>
+    <td>Cooking Spoons</td>
+    <td><input type="text" value="80" disabled="" id="Quantity9" name=""></td>		
+    <td><input type="text" value="2500" disabled="" id="Price9" name=""></td>
+    <td><input type="text" name="" id="Order9" onkeyup="cal9()" placeholder="place your order"></td>
+    <td><input type="text" name="" id="Total9" placeholder="place your order"></td>
+  </tr>
+
+  <tr>
+    <td>10</td>
+  <td><img id="mg10" style="height:50px" onmouseover="Display10()" src="washing.jpg"></td>
+    <td>Washing Machine</td>
+    <td><input type="text" value="50" id="Quantity10" disabled="" name=""></td>		
+    <td><input type="text" value="56000" disabled="" id="Price10" name=""></td>
+    <td><input type="text" name="" id="Order10" onkeyup="cal10()" placeholder="place your order"></td>
+    <td><input type="text" name="" id="Total10" placeholder="place your order"></td>
+  </tr>
+  <tr>
+  	<td></td>
+  	<td></td>
+  	<td></td>
+  	<td>
+<div class="container-fluid"> 
+<button  type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#mymodal">Use Calculator</button>
+<div class="modal fade" id="mymodal" role="dialog">
+	<div class="modal-dialog">
+	<div class="modal-content" style="background-image:url(port2.png); height: 250px;background-size: cover;background-repeat: no-repeat;">
+	<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	
+	</div>
+	<div class="modal-body">
+	<table border="3" style="border-radius:10px; border-color:green; background-color:indigo;text-align:center" >
+	<tr >
+		<td colspan="4" style="height:30px;font-size:20px; text-align:right; color:white;" id="screen" ></td>
+	</tr>
+	<tr border-radius:10px>
+		<td align="center" bgcolor="#E1E4FC"; width="50";><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="1" onclick="button(1)"></td>
+		<td align="center" bgcolor="#E1E4FC" width="50"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px"  id="b" type="button" value="2" onclick="button(2)"></td>
+		<td align="center" bgcolor="#E1E4FC" width="50"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px"  name="a" type="button" value="3" onclick="button(3)"></td>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="+" onclick="oper('plus')"></td>
+	</tr>
+	<tr>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="4" onclick="button(4)"></td>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="5" onclick="button(5)"></td>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="6" onclick="button(6)"></td>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="-" onclick="oper('minus')"></td>
+	</tr>
+	<tr>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="7" onclick="button(7)"></td>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="8" onclick="button(8)"></td>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="9" onclick="button(9)"></td>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="*" onclick="oper('mlt')"></td>
+	</tr>
+	<tr>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="ON" id="power" onclick="power()"></td>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="0" onclick="button(0)"></td>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="/" onclick="oper('div')"></td>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="=" onclick="equal()"></td>
+	</tr>
+	<tr>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="C"onclick="clr()"></td>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="." onclick="bot()"></td>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="Ex" onclick="oper('ex')"></td>
+		<td align="center" bgcolor="#E1E4FC" width="23"><input style="background-color:black;color:orange;margin-left:2px;padding-right:10px" type="button" value="%" onclick="per()"></td>
+		<a href=""></a>
+		
+	</tr>
+</table>
+	</td>
+  	<td id="majordisplay" colspan="2"  style="text-align:center;background-color:#C9302C;color:white"><b>Overall Total</b></td>
+  	<td><input id="ftotal" type="text" name="" ></td>
+  	<td><input type="submit" value="CheckOut" name="" id="gt"></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
